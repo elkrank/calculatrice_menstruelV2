@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculateur de cycle menstruel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+ 
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Calculatrice de cycle menstruel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="cycle_duration.html">Historique durée du cycle</a>
+            
+          </div>
+        </div>
+      </nav>
+    <div class="jumbotron bg-success  ">
+
+        <h1>Calculateur de cycle menstruel</h1>
+        <br>
+        <p class="text-light text-justify"> Choisissez la date de début de vos régles et le calculateur vous donne le jour théorique
+            de la fin de vos
+            régles, le début des prochaines, le début de votre période de fécondation et sa fin .
+            <br>
+            Lorsque vous quittez la page les dates sont sauvegardées dans votre navigateur afin de pouvoir les consulter
+            à nouveaux.</p>
+    </div>
+    </div>
+    <div class="">
+    <label for="duree-cycle" class="text-light mx-auto">Entrez la durée de votre cycle</label>
+    <input class="mb-2"type="number" name="duree-cycle" id="duree-cycle">
+    </div>
+    <div>
+        <p class="text-light text-justify">Si vous ne rentrez rien la base d'un cycle de 28 jours sera prise en compte pour le calcul
+        </p>
+    </div>
+
+    <table class="table-bordered table-dark   ">
+        <tr>
+            <th>Jour de début des régles</th>
+            <th>Jour théorique de fin</th>
+            <th>Prévision prochaines régles</th>
+
+        </tr>
+        <tr class=" center ">
+            <td id="debut"></td>
+            <td id="fin"></td>
+            <td id="prochaine" class="text-danger"></td>
+
+        </tr>
+    </table>
+
+
+    <input class="form-control  " type="date" name="date" id="date">
+    <input class="form-control   bg-success text-light" type="submit" value="valider" onclick="getcycle()">
+    <table class="table-bordered table-dark ">
+        <tr>
+            <th>Début période de fécondation</th>
+            <th>Jour d'ovulation</th>
+            <th>Fin période de fécondation</th>
+        </tr>
+        <tr>
+            <td id="debutFecondation"></td>
+            <td id="ovule" class="text-success"></td>
+            <td id="finFecondation"></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <h3 class="bg-white">Sauvegarde de votre cycle</h3>
+    <table class="table-bordered table-dark   ">
+        <tr>
+            <th>Jour de début des régles</th>
+            
+            <th>Fin théorique du cycle</th>
+
+        </tr>
+        <tr>
+            <td id="sg-debut"></td>
+            <td id="sg-prochaine" class="text-danger"></td>
+
+        </tr>
+    </table>
+    <table class="table-bordered table-dark ">
+        <tr>
+            <th>Début période de fécondation</th>
+            <th>Jour d'ovulation</th>
+            <th>Fin période de fécondation</th>
+        </tr>
+        <tr>
+            <td id="sg-debutFecondation"></td>
+            <td id="sg-ovule" class="text-success"></td>
+            <td id="sg-finFecondation"></td>
+        </tr>
+    </table>
+    <script src="app_v2.js"></script>
+    <script src="last_cycle.js"></script>
+    
+    
+  
+
+</body>
+
+</html>
